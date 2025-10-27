@@ -1,0 +1,208 @@
+.sign-up {
+    width: 90%; /* Giống .sign-in */
+    max-width: 600px; /* Giữ nguyên */
+    padding: 90px 75px; /* Tăng padding giống .sign-in */
+    background-color: #ffffff;
+    border-radius: 20px;
+    min-height: 100vh; /* Thêm min-height giống .sign-in */
+    display: flex; /* Sử dụng flex giống .sign-in */
+    flex-direction: column; /* Giống .sign-in */
+    align-items: center; /* Gi�似 .sign-in */
+    justify-content: center; /* Giống .sign-in */
+    background: url('../images/back2.webp') no-repeat center center; /* Thêm background giống .sign-in */
+    background-size: cover; /* Giống .sign-in */
+    position: relative; /* Giữ nguyên */
+    margin: 80px auto; /* Giống .sign-in */
+}
+
+.sign-up-heading {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333; /* Sửa màu từ 'C' thành #333 giống .sign-in */
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.sign-up-social-google {
+    padding: 25px; /* Tăng padding giống .sign-in-submit */
+    border-radius: 20px; /* Tăng border-radius giống .sign-in */
+    display: flex; /* Giữ flex */
+    width: 100%;
+    color: white;
+    font-size: 18px; /* Tăng font-size giống .sign-in-submit */
+    font-weight: 600; /* Thêm font-weight giống .sign-in-submit */
+    border: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #db4437;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.5s ease; /* Thay đổi transition giống .sign-in-submit */
+    margin-bottom: 25px; /* Thêm margin-bottom giống .sign-in-submit */
+}
+
+.sign-up-social-google:hover {
+    background-color: #c74135;
+}
+
+.sign-up-social-facebook {
+    margin-top: 10px;
+    padding: 25px; /* Tăng padding giống .sign-in-submit */
+    border-radius: 20px; /* Tăng border-radius giống .sign-in */
+    display: flex; /* Giữ flex */
+    width: 100%;
+    color: white;
+    font-size: 18px; /* Tăng font-size giống .sign-in-submit */
+    font-weight: 600; /* Thêm font-weight giống .sign-in-submit */
+    border: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #4c6ff4;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.5s ease; /* Thay đổi transition giống .sign-in-submit */
+    margin-bottom: 25px; /* Thêm margin-bottom giống .sign-in-submit */
+}
+
+.sign-up-social-facebook:hover {
+    background-color: #3e60ea;
+}
+
+.sign-up-social i {
+    width: 60px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4c6ff4;
+    font-size: 30px;
+}
+
+.sign-up-social-text {
+    font-size: 15px;
+    display: block;
+    margin: 0 auto;
+}
+
+.sign-up-or {
+    text-align: center;
+    font-size: 20px;
+    color: #999;
+    margin: 20px auto;
+    position: relative;
+}
+
+.sign-up-or span {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.sign-up-or:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #999;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.sign-up-label {
+    font-size: 16px; /* Tăng font-size giống .sign-in-label */
+    color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.sign-up-input {
+    display: block;
+    width: 100%;
+    padding: 25px; /* Tăng padding giống .sign-in-input */
+    border-radius: 20px;
+    background-color: #dbdfe7;
+    outline: none;
+    border: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    margin-bottom: 30px; /* Tăng margin-bottom giống .sign-in-input */
+    margin-top: 5px;
+}
+
+.sign-up-submit {
+    padding: 25px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    display: block; /* Đảm bảo là block */
+    border: 0;
+    outline: none;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #82c91e;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    margin-bottom: 25px;
+}
+
+.sign-up-submit:hover {
+    background-color: #74b41c;
+}
+
+.sign-up-already {
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    padding-left: 5px;
+    text-align: center;
+    color: #999;
+}
+
+.sign-up-login {
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    padding-left: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #82c91e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sign-up {
+        padding: 40px 30px; /* Giống .sign-in */
+        width: 95%; /* Giống .sign-in */
+        min-height: auto; /* Giống .sign-in */
+    }
+
+    .sign-up-heading {
+        font-size: 32px; /* Giống .sign-in */
+    }
+
+    .sign-up-input,
+    .sign-up-submit {
+        padding: 20px; /* Giống .sign-in */
+        font-size: 16px; /* Giống .sign-in */
+    }
+
+    .sign-up-label,
+    .sign-up-already,
+    .sign-up-login {
+        font-size: 14px; /* Giống .sign-in */
+    }
+
+    .sign-up-social-google,
+    .sign-up-social-facebook {
+        padding: 20px; /* Giống .sign-in-submit trong responsive */
+        font-size: 16px; /* Giống .sign-in-submit trong responsive */
+    }
+}

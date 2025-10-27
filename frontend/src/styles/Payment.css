@@ -1,0 +1,311 @@
+/* src/styles/Payment.css */
+
+/* Container chung cho Payment, PaymentSuccess, PaymentFailure */
+.payment-container {
+  margin-top: 80px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  position: relative;
+  z-index: 10000;
+  display: block;
+}
+
+/* Lớp phủ mờ (chỉ áp dụng cho Payment) */
+.payment-container.with-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: -1;
+  border-radius: 12px;
+}
+
+/* Hình nền (chỉ áp dụng cho Payment) */
+.payment-container.with-background {
+  background-image: url('https://example.com/background-nuts.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* Tiêu đề chung */
+.payment-container h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Tiêu đề cho PaymentSuccess */
+.payment-container h2.success {
+  color: #28a745; /* Xanh lá cho thành công */
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Thêm đường viền dưới tiêu đề */
+.payment-container h2.success::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #28a745;
+  border-radius: 2px;
+}
+
+/* Tiêu đề cho PaymentFailure */
+.payment-container h2.error {
+  color: #e74c3c; /* Đỏ cho thất bại */
+}
+
+/* Order Summary */
+.order-summary {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 25px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.order-summary h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+/* Đường viền dưới cho tiêu đề trong order-summary */
+.order-summary h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #3498db;
+  border-radius: 2px;
+}
+
+/* Order Items */
+.order-items {
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #e8e8e8;
+  transition: background-color 0.3s ease;
+}
+
+.order-item:hover {
+  background-color: #f5f5f5;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-item-image {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.order-item-details {
+  flex: 1;
+  text-align: left;
+}
+
+.order-item-details p {
+  margin: 5px 0;
+  font-size: 15px;
+  color: #555;
+}
+
+.order-item-details p strong {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Order Total */
+.order-total {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 20px; /* Tăng kích thước font */
+  font-weight: 800; /* Tăng độ đậm */
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.order-total strong {
+  color: #e74c3c;
+  font-weight: 800;
+}
+
+/* Shipping Address */
+.order-summary p {
+  font-size: 15px;
+  color: #666;
+  margin: 8px 0;
+}
+
+.order-summary p strong {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Error Message */
+.error-message {
+  color: #e74c3c;
+  font-size: 15px;
+  margin-bottom: 20px;
+  background-color: #fff5f5;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #e74c3c;
+}
+
+/* Payment Button */
+.payment-btn {
+  margin-top: 25px;
+  padding: 12px 40px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+.payment-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.payment-btn:active {
+  transform: translateY(0);
+}
+
+.payment-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .payment-container {
+    padding: 20px;
+    margin: 15px;
+  }
+
+  .payment-container h2 {
+    font-size: 24px;
+  }
+
+  .order-summary {
+    padding: 15px;
+  }
+
+  .order-summary h3 {
+    font-size: 18px;
+  }
+
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+
+  .order-item-image {
+    margin-bottom: 15px;
+    margin-right: 0;
+    width: 60px;
+    height: 60px;
+  }
+
+  .order-item-details {
+    text-align: center;
+  }
+
+  .order-item-details p {
+    font-size: 14px;
+  }
+
+  .order-total {
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+
+  .order-summary p {
+    font-size: 14px;
+  }
+
+  .payment-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-container h2 {
+    font-size: 20px;
+  }
+
+  .order-summary h3 {
+    font-size: 16px;
+  }
+
+  .order-item-details p {
+    font-size: 13px;
+  }
+
+  .order-total {
+    font-size: 16px;
+  }
+
+  .order-summary p {
+    font-size: 13px;
+  }
+
+  .payment-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

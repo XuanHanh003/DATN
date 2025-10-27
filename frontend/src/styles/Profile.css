@@ -1,0 +1,285 @@
+/* components/Profile.css */
+.profile-container {
+  margin-top: 80px !important;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #e6f0fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-info,
+.order-history,
+.order-details {
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.user-info h2,
+.order-history h2,
+.order-details h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.email-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.change-password-btn {
+  padding: 8px 16px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.change-password-btn:hover {
+  background: #2980b9;
+}
+
+.password-form {
+  margin-top: 20px;
+}
+
+.password-input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 250px;
+  border: 1px solid #3498db;
+  border-radius: 5px;
+  font-size: 16px;
+  display: block;
+}
+
+.update-btn {
+  padding: 10px 20px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-right: 10px;
+}
+
+.update-btn:hover {
+  background: #219653;
+}
+
+.cancel-btn {
+  padding: 10px 20px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cancel-btn:hover {
+  background: #c0392b;
+}
+
+/* Bảng lịch sử đơn hàng */
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.order-table th,
+.order-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.order-table th {
+  background: #3498db;
+  color: white;
+  font-weight: bold;
+}
+
+.order-table tr:hover {
+  background: #f0f8ff;
+  cursor: pointer;
+}
+
+.view-details-btn {
+  padding: 6px 12px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-details-btn:hover {
+  background: #219653;
+}
+
+/* Thông tin đơn hàng */
+.order-info p {
+  margin: 8px 0;
+  color: #34495e;
+}
+
+.order-info strong {
+  color: #2c3e50;
+}
+
+/* Bảng sản phẩm trong đơn hàng */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.product-table th,
+.product-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.product-table th {
+  background: #3498db;
+  color: white;
+  font-weight: bold;
+}
+
+.product-table .product-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* ==== ĐÁNH GIÁ SẢN PHẨM ==== */
+
+/* Chưa đánh giá */
+.review-section.pending-review {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #f7f7f7;
+  border-left: 4px solid #3498db;
+  padding: 12px 16px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+/* Đã đánh giá */
+.review-section.reviewed {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #e0f7e9;
+  border-left: 6px solid #27ae60;
+  padding: 12px 16px;
+  margin-top: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Văn bản trạng thái */
+.review-status {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.check-icon {
+  color: #27ae60;
+  font-size: 16px;
+}
+
+/* Hiển thị đánh giá */
+.review-display {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rating-display {
+  display: flex;
+  gap: 2px;
+}
+
+.review-comment {
+  background: #ffffff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #34495e;
+}
+
+/* Ngôi sao */
+.star-filled {
+  color: #ffd700;
+  font-size: 20px;
+}
+
+.star-empty {
+  color: #ccc;
+  font-size: 20px;
+}
+
+.star-filled,
+.star-empty {
+  cursor: pointer;
+}
+
+/* Ô nhập đánh giá */
+.review-textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border: 1px solid #3498db;
+  border-radius: 5px;
+  resize: none;
+  font-size: 14px;
+}
+
+/* Nút gửi đánh giá */
+.submit-review-btn {
+  padding: 8px 16px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-review-btn:hover {
+  background: #219653;
+}
+
+/* Nút sửa đánh giá */
+.edit-review-btn {
+  padding: 8px 16px;
+  background: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.edit-review-btn:hover {
+  background: #d68910;
+}

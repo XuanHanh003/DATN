@@ -1,0 +1,156 @@
+.team {
+    background-image: url("../images/background-all.png");
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+    width: 100%;
+    min-height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.team::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+.team .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.team .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+    gap: 20px; /* Thêm gap để tạo khoảng cách giữa các item */
+}
+
+.team .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.team .section-title h2 {
+    font-size: 32px;
+    color: #fff;
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+}
+
+.team .section-title h2::before {
+    content: attr(data-title);
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: #3498db;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+}
+
+.team-items {
+    width: calc(33.33% - 50px); /* Đảm bảo 3 item trên 1 hàng */
+    margin: 0 10px 30px;
+    position: relative;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.team-items img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 50px;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.team-items:hover img {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.team-items-text {
+    position: relative;
+    margin-top: 20px;
+    width: 80%;
+    background-color: #f2e4b7;
+    border-radius: 20px;
+    padding: 15px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.team-items:hover .team-items-text {
+    background-color: #f3e1a8;
+    transform: translateY(-10px);
+}
+
+.team-items-text h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #2c3e50;
+    font-family: 'Dancing Script', cursive;
+    display: block;
+}
+
+.team-items-text span {
+    display: block;
+    font-size: 16px;
+    color: #7f8c8d;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .team {
+        padding: 40px 0;
+    }
+
+    .team-items {
+        width: calc(33.33% - 20px); /* Giữ 3 item trên 1 hàng */
+        margin: 0 10px 30px;
+    }
+
+    .team-items img {
+        max-width: 200px;
+    }
+
+    .team-items-text {
+        width: 90%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .team-items {
+        width: calc(33.33% - 20px); /* Giữ 3 item trên 1 hàng */
+        margin: 0 10px 30px;
+    }
+
+    .team-items img {
+        max-width: 150px; /* Giảm kích thước ảnh trên mobile */
+    }
+}

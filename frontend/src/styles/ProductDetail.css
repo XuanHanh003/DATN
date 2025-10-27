@@ -1,0 +1,296 @@
+.product-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
+    min-height: 100vh;
+    padding-top: 80px;
+    padding: 20px;
+    margin-top: 80px;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.product-content {
+    display: block;
+    max-width: 1200px;
+    width: 100%;
+    padding: 30px;
+    margin: 80px auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(231, 76, 60, 0.15);
+    border: 2px solid #e74c3c;
+}
+.address-section {
+    margin-top: 40px;
+    padding: 25px;
+    border: 2px solid #e74c3c;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    box-shadow: 0 4px 16px rgba(231, 76, 60, 0.1);
+}
+
+.address-section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #e74c3c;
+    font-weight: 700;
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+}
+
+.selected-address-section {
+    padding: 15px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    background-color: #e0f7fa;
+    margin-bottom: 20px;
+}
+
+.selected-address-section p {
+    margin: 5px 0;
+}
+/* modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+/* modal */
+/* styles/ProductDetail.css */
+/* styles/ProductDetail.css */
+.product-detail {
+    font-family: Arial, sans-serif;
+}
+
+.product-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.address-section {
+    margin-top: 20px;
+    position: relative;
+}
+
+.address-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.selected-address-section {
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #e6f7ff;
+}
+
+.selected-address-section p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.selected-address-section p strong {
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+.address-section p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.change-address-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.change-address-btn:hover {
+    background-color: #218838;
+}
+
+.address-table-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.address-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.address-table th,
+.address-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 14px;
+}
+
+.address-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+}
+
+.address-table td {
+    background-color: #fff;
+}
+
+.address-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.address-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.select-btn {
+    margin-right: 5px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.select-btn:hover {
+    background-color: #0056b3;
+}
+
+.add-address-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+.add-address-btn:hover {
+    background-color: #0056b3;
+}
+
+.edit-btn {
+    margin-right: 5px;
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.edit-btn:hover {
+    background-color: #218838;
+}
+
+.delete-btn {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-content h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}

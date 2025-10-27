@@ -1,0 +1,461 @@
+/* Font Google - Modern Tech Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* Layout chính */
+.menu {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 20px;
+    color: #333333;
+}
+
+/* Container tổng */
+.menu-wrapper {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+/* Sidebar danh mục */
+.menu-sidebar {
+    width: 220px;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    border: 1px solid #e5e7eb;
+    backdrop-filter: blur(10px);
+}
+
+/* Tiêu đề danh mục */
+.menu-sidebar h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ff4444;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(255, 68, 68, 0.2);
+    letter-spacing: 0.5px;
+}
+
+/* Checkbox danh mục */
+.menu-sidebar .category-checkbox {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Loading và Error states */
+.loading-message, .error-message {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.loading-message {
+    background: linear-gradient(145deg, #dbeafe, #bfdbfe);
+    color: #1e40af;
+    border: 1px solid #3b82f6;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.error-message {
+    background: linear-gradient(145deg, #fef2f2, #fee2e2);
+    color: #dc2626;
+    border: 1px solid #ef4444;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
+.success-message {
+    background: linear-gradient(145deg, #f0fdf4, #dcfce7); /* Light green */
+    color: #16a34a; /* Dark green */
+    border: 1px solid #22c55e; /* Green */
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2);
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-weight: 500;
+    text-align: center;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.loading-container, .no-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #374151;
+    background: linear-gradient(145deg, #f8fafc, #e2e8f0);
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.loading-container p, .no-products p {
+    text-align: center;
+}
+
+.menu-sidebar .category-checkbox label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    user-select: none;
+    border: 1px solid transparent;
+    letter-spacing: 0.2px;
+}
+
+.menu-sidebar .category-checkbox label:hover {
+    background: linear-gradient(145deg, #ff4444, #cc3333);
+    color: #ffffff;
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(255, 68, 68, 0.3);
+}
+
+.menu-sidebar .category-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #3b82f6;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Phần nội dung chính */
+.menu-main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tiêu đề section */
+.section-title {
+    padding: 40px 0;
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    border-radius: 16px;
+    margin-bottom: 30px;
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.section-title h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-align: center;
+    color: #1f2937;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    position: relative;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-title h2::after {
+    content: "";
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff4444, #ff6666);
+    display: block;
+    margin: 15px auto 0;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(255, 68, 68, 0.4);
+}
+
+/* Tagline */
+.menu-title h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 16px 24px;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    letter-spacing: 0.3px;
+    line-height: 1.5;
+}
+
+/* Container sản phẩm */
+.menu-products {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 16px;
+    padding: 30px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+/* Sắp xếp */
+.menu-sort {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.menu-sort select {
+    padding: 10px 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    cursor: pointer;
+    color: #374151;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    letter-spacing: 0.2px;
+}
+
+.menu-sort select:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.2);
+}
+
+.menu-sort select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Grid sản phẩm */
+.menu-lists {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+/* Mỗi sản phẩm */
+.food-items {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding: 20px;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border: 2px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.food-items:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 48px rgba(59, 130, 246, 0.2);
+    border-color: #3b82f6;
+}
+
+/* Hình ảnh sản phẩm */
+.food-item img {
+    width: 100%;
+    height: 200px;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    border: 2px solid #e5e7eb;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.3s ease;
+}
+
+.food-item img:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+}
+
+/* Tiêu đề sản phẩm */
+.food-issue h2 {
+    margin: 10px 0;
+    color: #1f2937;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+}
+
+/* Giá sản phẩm */
+.food-price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+}
+
+.food-price .original-price {
+    font-size: 12px;
+    color: #888888;
+    text-decoration: line-through;
+}
+
+.food-price .current-price {
+    font-size: 1.1rem;
+    color: #ff4444;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.3px;
+}
+
+.food-price .current-price span {
+    font-size: 0.8rem;
+    color: #3b82f6;
+    margin-left: 4px;
+    font-weight: 500;
+}
+
+.food-price .discount {
+    font-size: 0.7rem;
+    color: #FFFFFF;
+    background: linear-gradient(145deg, #3b82f6, #1d4ed8);
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.2px;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+/* Meta sản phẩm */
+.food-meta {
+    margin: 8px 0;
+    font-size: 0.75rem;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+}
+
+/* Đổi màu xe hàng */
+.food-meta .cart-icon {
+    color: #3b82f6;
+}
+
+/* Nút thêm vào giỏ hàng */
+.add-to-cart-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: linear-gradient(145deg, #ff4444, #cc3333);
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(255, 68, 68, 0.3);
+    transition: all 0.3s ease;
+    letter-spacing: 0.2px;
+}
+
+.add-to-cart-btn:hover {
+    background: linear-gradient(145deg, #3b82f6, #1d4ed8);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .menu-wrapper {
+        flex-direction: column;
+    }
+    .menu-sidebar {
+        width: 100%;
+        position: static;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        padding: 40px 10px;
+    }
+    .menu-lists {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+    .food-item img {
+        height: 180px;
+        aspect-ratio: 1 / 1;
+    }
+    .section-title h2 {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+    .menu-title h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-lists {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+    .food-item img {
+        height: 160px;
+        aspect-ratio: 1 / 1;
+    }
+    .section-title h2 {
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+    }
+    .menu-title h2 {
+        font-size: 1rem;
+    }
+    .food-issue h2 {
+        font-size: 0.85rem;
+    }
+    .food-price .current-price {
+        font-size: 1rem;
+    }
+}

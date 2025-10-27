@@ -1,0 +1,118 @@
+.product-review-container {
+  margin: 20px 0;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.product-review-container h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+}
+
+.reviews-section {
+  margin-bottom: 15px;
+}
+
+.toggle-btn {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(231, 76, 60, 0.3);
+}
+
+.toggle-btn:hover {
+  background: linear-gradient(135deg, #c0392b, #a93226);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(231, 76, 60, 0.4);
+}
+
+.toggle-btn::after {
+  content: '▼'; /* Biểu tượng mũi tên xuống */
+  display: inline-block;
+  font-size: 12px;
+  transition: transform 0.3s;
+}
+
+.toggle-btn.expanded::after {
+  content: '▲'; /* Biểu tượng mũi tên lên khi mở rộng */
+  transform: rotate(180deg);
+}
+
+.review-list {
+  margin-top: 10px;
+}
+
+.review-item {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  background: linear-gradient(135deg, #f8f9fa, #ffffff);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border-left: 4px solid #e74c3c;
+  transition: all 0.3s ease;
+}
+
+.review-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #34495e;
+}
+
+.reviewer-name {
+  font-weight: bold;
+}
+
+.review-rating {
+  margin: 5px 0;
+}
+
+.star-filled {
+  color: #ffd700;
+  font-size: 16px;
+}
+
+.star-empty {
+  color: #ccc;
+  font-size: 16px;
+}
+
+.review-comment {
+  color: #7f8c8d;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.average-rating {
+  padding: 15px;
+  background: linear-gradient(135deg, #e8f4fd, #f0f8ff);
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid #b3d9ff;
+  margin-top: 10px;
+}
+
+.average-rating strong {
+  color: #2c3e50;
+}

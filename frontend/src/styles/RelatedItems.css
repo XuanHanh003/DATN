@@ -1,0 +1,121 @@
+.related-items {
+  margin-top: 40px;
+  padding: 25px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 16px;
+  border: 2px solid #e74c3c;
+  box-shadow: 0 4px 16px rgba(231, 76, 60, 0.1);
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.related-items h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #e74c3c;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+}
+
+.related-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 15px;
+  white-space: nowrap;
+  scrollbar-width: thin;
+  scrollbar-color: #e74c3c #f1f1f1;
+}
+
+.related-list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.related-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.related-list::-webkit-scrollbar-thumb {
+  background: #e74c3c;
+  border-radius: 4px;
+}
+
+.related-list::-webkit-scrollbar-thumb:hover {
+  background: #c0392b;
+}
+
+.related-item {
+  flex: 0 0 auto;
+  width: 180px;
+  padding: 15px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 12px;
+  border: 2px solid #e74c3c;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(231, 76, 60, 0.15);
+}
+
+.related-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(231, 76, 60, 0.25);
+  border-color: #c0392b;
+}
+
+.related-image {
+  width: 100%;
+  height: 100px; /* Chiều cao hình ảnh */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.related-name {
+  font-size: 14px;
+  margin: 8px 0;
+  color: #333;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* Giới hạn 2 dòng */
+  line-clamp: 2; /* Chuẩn mới */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.related-price {
+  font-size: 14px;
+  color: #ee4d2d; /* Màu đỏ giống Shopee */
+  font-weight: bold;
+}
+
+.btn-add {
+  width: 100%;
+  padding: 6px;
+  border: none;
+  background: #ffeedd; /* Màu nền nhạt giống Shopee */
+  color: #ee4d2d; /* Màu chữ đỏ */
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-add:hover {
+  background: #ee4d2d;
+  color: white;
+}
+
+/* Tùy chỉnh thanh cuộn ngang */
+.related-list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.related-list::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 4px;
+}
+
+.related-list::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}

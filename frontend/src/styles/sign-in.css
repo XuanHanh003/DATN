@@ -1,0 +1,130 @@
+.sign-in {
+    width: 90%;
+    max-width: 600px;
+    padding: 90px 75px;
+    background: linear-gradient(135deg, var(--white) 0%, var(--light-gray) 100%);
+    border-radius: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--primary-red);
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    margin: 0 auto;
+}
+
+.sign-in-heading {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--primary-red);
+    text-align: center;
+    margin-bottom: 35px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.error-message {
+    color: var(--primary-red);
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+    background: var(--light-red);
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--primary-red);
+}
+
+.sign-in-label {
+    font-size: 16px;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.sign-in-input {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: var(--white);
+    outline: none;
+    border: 2px solid var(--border-color);
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+
+.sign-in-submit {
+    padding: 20px;
+    color: var(--white);
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    border: 0;
+    outline: none;
+    width: 100%;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow);
+    border: 2px solid transparent;
+}
+
+.sign-in-submit:hover {
+    background: linear-gradient(135deg, var(--dark-red) 0%, var(--primary-red) 100%);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-red);
+}
+
+.sign-in-already {
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    padding-left: 5px;
+    text-align: center;
+    color: #999;
+}
+
+.sign-in-login {
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    padding-left: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #82c91e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sign-in {
+        padding: 40px 30px;
+        width: 95%;
+        min-height: auto; /* Bỏ min-height trên mobile */
+    }
+
+    .sign-in-heading {
+        font-size: 32px;
+    }
+
+    .sign-in-input,
+    .sign-in-submit {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .sign-in-label,
+    .sign-in-already,
+    .sign-in-login {
+        font-size: 14px;
+    }
+}

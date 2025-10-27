@@ -1,0 +1,221 @@
+/* SignIn styles - Đồng bộ hoàn toàn với frontend */
+.sign-in {
+    width: 90%;
+    max-width: 600px;
+    padding: 90px 75px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: url('/back2.webp') no-repeat center center; */
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.sign-in-heading {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 35px;
+    font-family: var(--sub-text);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #ffebee;
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #e74c3c;
+    width: 100%;
+}
+
+.sign-in-label {
+    font-size: 16px;
+    color: var(--main-color);
+    margin-bottom: 10px;
+    display: inline-block;
+    cursor: pointer;
+    font-family: var(--primary-font);
+    font-weight: 600;
+}
+
+.sign-in-input {
+    display: block;
+    width: 100%;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: #dbdfe7;
+    outline: none;
+    border: 0;
+    font-family: var(--primary-font);
+    font-size: 16px;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+}
+
+.sign-in-input:focus {
+    background-color: #f0f2f5;
+    box-shadow: 0 0 0 3px rgba(130, 201, 30, 0.3);
+    transform: scale(1.02);
+}
+
+.sign-in-submit {
+    padding: 25px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    border: 0;
+    outline: none;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #82c91e;
+    cursor: pointer;
+    font-family: var(--primary-font);
+    font-weight: 600;
+    transition: all 0.5s ease;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.sign-in-submit:hover {
+    background-color: #74b41c;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.sign-in-submit:active {
+    transform: scale(1.02);
+}
+
+.sign-in-already {
+    font-size: 15px;
+    font-family: var(--primary-font);
+    padding-left: 5px;
+    text-align: center;
+    color: #999;
+}
+
+.sign-in-login {
+    font-size: 15px;
+    font-family: var(--primary-font);
+    padding-left: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #82c91e;
+    transition: color 0.3s ease;
+}
+
+.sign-in-login:hover {
+    color: #74b41c;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sign-in {
+        padding: 40px 30px;
+        width: 95%;
+        min-height: auto;
+    }
+
+    .sign-in-heading {
+        font-size: 32px;
+    }
+
+    .sign-in-input,
+    .sign-in-submit {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .sign-in-label,
+    .sign-in-already,
+    .sign-in-login {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sign-in {
+        padding: 30px 20px;
+        width: 98%;
+    }
+
+    .sign-in-heading {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .sign-in-input,
+    .sign-in-submit {
+        padding: 18px;
+        font-size: 15px;
+    }
+}
+
+/* Animation effects */
+.sign-in {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sign-in-input {
+    animation: slideIn 0.6s ease-out;
+}
+
+.sign-in-input:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.sign-in-input:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.sign-in-submit {
+    animation: slideIn 0.6s ease-out 0.3s both;
+}
+
+/* Loading state */
+.sign-in-submit:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.sign-in-submit:disabled:hover {
+    background-color: #ccc;
+    transform: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
